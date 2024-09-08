@@ -1,4 +1,4 @@
-function pictureEnlargement(imgs) {
+function myFunction(imgs) {
   let expandImg = document.getElementById("expandedImg");
 
   let imgText = document.getElementById("imgtext");
@@ -56,7 +56,7 @@ function updateDisplayImage(image) {
   document.getElementById("imgtext").textContent = image.alt;
 }
 
-function pictureEnlargement(imgs) {
+function myFunction(imgs) {
   let expandImg = document.getElementById("expandedImg");
   let imgText = document.getElementById("imgtext");
 
