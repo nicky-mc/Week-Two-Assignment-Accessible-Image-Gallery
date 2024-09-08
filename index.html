@@ -3,21 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./app.js" defer></script>
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="/assets/favicon-32x32.png"
-    />
-    <title>My Media Gallery mostly of me</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Image Gallery</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon-32x32.png" />
   </head>
   <body>
-    <h1>Have a Peek at my images</h1>
-    <div id="thumbnail-container"></div>
-    <div id="main-image-container"></div>
-    <!-- Stretch Goal: you can have two buttons to navigate your thumbnail images
-    <button></button>
-    <button></button> -->
+    <header>
+      <button id="next" aria-label="Go to the next image">&gt;</button>
+      <button id="prev" aria-label="Go to the previous image">&lt;</button>
+    </header>
+    <main>
+      <div class="scroll-container">
+        <div class="column">
+          <img
+            src="assets/berlinarty.jpeg"
+            alt="Two people making faces at each other as a U-Bahn train runs past behind them"
+            onclick="myFunction(this);"
+            width="75%"
+          />
+        </div>
+        <div class="column">
+          <img
+            src="assets/july4th.jpeg"
+            alt="pre voting burritos my wife on the left me on the right"
+            onclick="myFunction(this);"
+            width="75%"
+          />
+        </div>
+        <div class="column">
+          <img
+            src="assets/me.jpeg"
+            alt="just me"
+            onclick="myFunction(this);"
+            width="75%"
+          />
+        </div>
+        <div class="column">
+          <img
+            src="assets/me7.jpeg"
+            alt="me posing as per"
+            onclick="myFunction(this);"
+            width="75%"
+          />
+        </div>
+        <div class="column">
+          <img
+            src="assets/me2years ago.jpeg"
+            alt="me 2 years ago serriously"
+            onclick="myFunction(this);"
+            width="75%"
+          />
+        </div>
+        <div class="column">
+          <img
+            src="assets/wedding.jpeg"
+            alt="my Wedding day"
+            onclick="myFunction(this);"
+            width="75%"
+          />
+        </div>
+        <div class="column">
+          <img
+            src="assets/5B2AD1F4-EF5B-4268-93C6-2D60E847D1D4.jpg"
+            alt="my Wife Charlotte posing by 'her' check point"
+            onclick="myFunction(this);"
+            width="75%"
+          />
+        </div>
+      </div>
+      <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn"
+          >&times;</span
+        >
+        <img id="expandedImg" style="width: 100%" />
+        <div id="imgtext"></div>
+      </div>
+    </main>
+    <footer>
+      <video src="assets/Germany - 2023 Trip.mp4" controls width="100%"></video>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>

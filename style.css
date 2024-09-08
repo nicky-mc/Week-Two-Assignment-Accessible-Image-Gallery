@@ -1,8 +1,90 @@
-/* this import resets the default browser stylesheet */
-/*@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"); */
-
+html {
+  height: 100%;
+  width: 100%;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
 * {
-  background-color: rgb(54, 53, 53);
+  @media all and (min-width: 1024px) and (max-width: 1280px) {
+  }
+
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+  }
+
+  @media all and (min-width: 480px) and (max-width: 768px) {
+  }
+
+  @media all and (max-width: 480px) {
+  }
 }
 
-/* make sure you have media queries!!!!!! */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  position: relative;
+  display: none;
+}
+
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+  text-shadow: 3px 3px 0 black;
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: black;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.scroll-container {
+  background-color: rgb(39, 37, 37);
+  overflow-y: scroll;
+  max-height: 400px;
+  white-space: breakspaces;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  padding: 10px;
+  justify-content: center;
+  transition: 700ms cubic-bezier(0.075, 0.02, 0.165, 1);
+  transform-origin: center;
+  gap: 3px;
+  column-gap: 5px;
+}
+button {
+  width: 90px;
+  height: 40px;
+}
